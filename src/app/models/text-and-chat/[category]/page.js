@@ -60,7 +60,7 @@ export default function ModelPage({ params }) {
       : { task: 'text-generation', messages: chatMessages };
 
     try {
-      const response = await fetch('/api/mistral', {
+      const response = await fetch('/api/mistral/text-and-chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(requestBody),
