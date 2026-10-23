@@ -3,21 +3,9 @@ import { useState, useEffect, useRef } from 'react';
 import { Container, Form, Button, Badge } from 'react-bootstrap';
 import styles from './styles/model.module.css';
 import { useNav } from '@/app/context/NavContext';
+import { TRANSLATION_LANGUAGES } from '@/app/models/config.js';
 
-const TRANSLATION_LANGUAGES = [
-  { code: 'fr', label: 'French' },
-  { code: 'de', label: 'German' },
-  { code: 'es', label: 'Spanish' },
-  { code: 'ar', label: 'Arabic' },
-  { code: 'zh', label: 'Chinese' },
-  { code: 'ru', label: 'Russian' },
-  { code: 'tr', label: 'Turkish' },
-  { code: 'ur', label: 'Urdu' },
-  { code: 'hi', label: 'Hindi' },
-  { code: 'it', label: 'Italian' },
-  { code: 'nl', label: 'Dutch' },
-  { code: 'ja', label: 'Japanese' },
-];
+
 
 export default function ModelPage({ params }) {
   const [category, setCategory] = useState('');
